@@ -1,0 +1,101 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    color: #000;
+}
+.main-content {
+    margin-left: 200px;
+}
+.title {
+    margin-bottom: 0;
+    font-size: 30pt;
+}
+.subtitle {
+    font-style: italic;
+}
+.date {
+    font-size: 8pt;
+    text-align: right;
+    margin-right: 10px;
+}
+.sidebar {
+    background-color: #444;
+    color: #ddd;
+    border-right-style: solid;
+    border-right-width: 5px;
+    border-right-color: #222;
+    position: fixed;
+    display: block;
+    width: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: width 0.5s;
+}
+nav {
+    margin-left: 3px;
+    margin-right: 20px; /* enough space for a potential scroll bar */
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    text-overflow: inherit;
+    transition: color 0.2s;
+    width: 100%;
+}
+a:hover {
+    color: #f44;
+}
+.table-of-contents {
+    font-size: 17px;
+    list-style-type: '└ ';
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+ul {
+    list-style-type: inherit;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #555;
+}
+th, td {
+    padding: 10px;
+}
+thead {
+    background-color: #ddd;
+}
+pre {
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 3px;
+}
+code {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+blockquote {
+    background-color: #ddd;
+    border-left-style: solid;
+    border-left-color: #33c;
+    border-left-width: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

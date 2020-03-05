@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$" $if(dir)$ dir="$dir$" $endif$>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  $for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+  $endfor$
+  $if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+  $endif$
+  $if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+  $endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style>
+    $styles.html()$
+  </style>
+  $for(css)$
+  <link rel="stylesheet" href="$css$" />
+  $endfor$
+  $if(math)$
+  $math$
+  $endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  $for(header-includes)$
+  $header-includes$
+  $endfor$
+</head>
+
+<body>
+  $for(include-before)$
+  $include-before$
+  $endfor$
+  $if(toc)$
+  <div id="sidebar-div" class="sidebar">
+    <nav id="$idprefix$TOC" role="doc-toc">
+      $if(toc-title)$
+      <h2 id="$idprefix$toc-title">$toc-title$</h2>
+      $endif$
+      <div class="table-of-contents">
+        $table-of-contents$
+      </div>
+    </nav>
+  </div>
+  $endif$
+  <div id="main-content-div" class="main-content">
+    $if(title)$
+    <header id="title-block-header">
+      <h1 class="title">$title$</h1>
+      $if(subtitle)$
+      <p class="subtitle">$subtitle$</p>
+      $endif$
+    </header>
+    $endif$
+    <hr />
+    $body$
+    <hr />
+    $for(author)$
+    <p class="author">$author$</p>
+    $endfor$
+    $if(date)$
+    <p class="date">$date$</p>
+    $endif$
+    $for(include-after)$
+    $include-after$
+    $endfor$
+  </div>
+</body>
+<script type="text/javascript">
+  sidebarDiv = document.getElementById("sidebar-div");
+  var sidebarRetractedWidth = 180;
+  // The width starts in 'auto' so here we calculate the size the
+  // sidebar wants to be to display all content
+  var sidebarExtendedWidth = Math.max(sidebarDiv.offsetWidth, sidebarRetractedWidth);
+  sidebarDiv.style.width = sidebarRetractedWidth + 'px';
+  sidebarDiv.onmouseenter = function() {
+    // Extend the sidebar to no more than 40% of the screen
+    this.style.width = Math.min(sidebarExtendedWidth, window.innerWidth * 0.4) + 'px';
+  }
+  sidebarDiv.onmouseleave = function () {
+    // Retract the sidebar back to original size
+    this.style.width = sidebarRetractedWidth + 'px';
+  }
+</script>
+</html>
