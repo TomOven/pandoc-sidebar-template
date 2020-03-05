@@ -6,5 +6,5 @@ everything else look pretty.
 
 Recommended use is:
 ```
-pandoc --toc --css src/pandoc-sidebar-template.css --template pandoc-sidebar-template.html --senf-contained <input document> -o <output document>.html
+pandoc --toc --css src/pandoc-sidebar-template.css --template pandoc-sidebar-template.html --self-contained <input document> -o <output document>.html
 ```
